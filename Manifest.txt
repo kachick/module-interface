@@ -1,7 +1,12 @@
-README.rdoc
+README.md
 LICENSE
-History.rdoc
+History.md
 Manifest.txt
 Rakefile
+Gemfile
+module-interface.gemspec
 lib/module/interface.rb
-dspec/from_example.rb
+lib/module/interface/version.rb
+lib/module/interface/core_ext.rb
+test/test_example.rb
+examples/README.rb

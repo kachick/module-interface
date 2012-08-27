@@ -13,6 +13,9 @@ test/tmp
 test/version_tmp
 tmp
 
+# bundler
+vendor/
+
 # YARD artifacts
 .yardoc
 _yardoc
@@ -23,4 +26,9 @@ doc/
 
 # editor
 *~
+*#*
 .redcar
+
+# other
+*.lock
+.rbx
