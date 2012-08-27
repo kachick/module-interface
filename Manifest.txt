@@ -4,4 +4,4 @@ History.rdoc
 Manifest.txt
 Rakefile
 lib/module/interface.rb
-dspec/from_example.rb
+test/test_example.rb
