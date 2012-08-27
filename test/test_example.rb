@@ -48,8 +48,6 @@ The klass.dup do |kls|
     kind_of base_mod
   end
   
-  The kls.instance_methods(false) do
-    is [:walk, :run]
-  end
+  ok {(kls.instance_methods(false) - [:walk, :run]).empty?}
 end
   
