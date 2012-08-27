@@ -4,4 +4,7 @@ History.rdoc
 Manifest.txt
 Rakefile
 lib/module/interface.rb
+lib/module/interface/version.rb
+lib/module/interface/core_ext.rb
 test/test_example.rb
+examples/README.rb
