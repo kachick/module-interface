@@ -1,12 +1,10 @@
-Module::Interface
-==================
-
-[![Build Status](https://secure.travis-ci.org/kachick/module-interface.png)](http://travis-ci.org/kachick/module-interface)
+module-interface
+=================
 
 Description
 -----------
 
-Block for to force define methods in module/class.
+BlockScope for to force define methods in module/class.
 
 Usage
 -----
@@ -17,22 +15,14 @@ Usage
 require 'module/interface'
 
 module Runnable
-
-  def walk
-  end
-
-  def run
-  end
-
+  def walk; end
+  def run; end
 end
 
 class Person
-  
+
   interface Runnable do
-  
-    def run
-    end
-  
+    def run; end
   end #=> NotDefinedError "must add methods [walk]"
 
 end
@@ -41,29 +31,33 @@ end
 Requirements
 ------------
 
-* Ruby 1.9.2 or later # [MRI/YARV, Rubinius, JRuby](http://travis-ci.org/#!/kachick/module-interface)
+* Ruby - [1.9.2 or later](http://travis-ci.org/#!/kachick/module-interface)
 
 Install
 -------
 
-```shell
+```bash
 $ gem install module-interface
 ```
+
+Build Status
+------------
+
+[![Build Status](https://secure.travis-ci.org/kachick/module-interface.png)](http://travis-ci.org/kachick/module-interface)
+
 
 Link
 ----
 
 * [code](https://github.com/kachick/module-interface)
+* [API](http://kachick.github.com/module-interface/yard/frames.html)
 * [issues](https://github.com/kachick/module-interface/issues)
 * [CI](http://travis-ci.org/#!/kachick/module-interface)
 * [gem](https://rubygems.org/gems/module-interface)
-* [gem+](http://metagem.info/gems/module-interface)
 
 License
 -------
 
-The MIT X License
-
-Copyright (c) 2012 Kenichi Kamiya
-
+The MIT X License  
+Copyright (c) 2012 Kenichi Kamiya  
 See the file LICENSE for further details.

@@ -1,4 +1,4 @@
-# Copyright (C) 2012 Kenichi Kamiya
+# Copyright (c) 2012 Kenichi Kamiya
 
 require_relative 'interface/version'
 
@@ -13,24 +13,16 @@ class Module
     # @return [self]
     # @example
     #   module Runnable
-    #
-    #     def walk
-    #     end
-    #   
-    #     def run
-    #     end
-    #
+    #     def walk; end
+    #     def run; end
     #   end
     #   
     #   class Person
-    #     
+    #
     #     interface Runnable do
-    #     
-    #       def run
-    #       end
-    #     
+    #       def run; end
     #     end #=> Interface::NotDefinedError "must add methods [walk]"
-    #   
+    #
     #   end
     def interface(base_mod, include_base_mod=true)
       module_eval do

@@ -4,10 +4,10 @@ gemspec
 
 group :development do
   gem 'rake'
-  gem 'yard', '>=0.8.2.1'
+  gem 'yard', '~> 0.8'
 end
 
 group :test do
   gem 'rake'
-  gem 'test-declare', '~>0.0.2.1'
+  gem 'test-declare', '~> 0.0.2'
 end
