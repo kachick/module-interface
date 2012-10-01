@@ -1,5 +1,3 @@
-require File.expand_path('../lib/module/interface/version', __FILE__)
-
 Gem::Specification.new do |gem|
   gem.authors       = ['Kenichi Kamiya']
   gem.email         = ['kachick1+ruby@gmail.com']
@@ -12,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features|declare)/})
   gem.name          = 'module-interface'
   gem.require_paths = ['lib']
-  gem.version       = Module::Interface::VERSION.dup # dup for https://github.com/rubygems/rubygems/commit/48f1d869510dcd325d6566df7d0147a086905380#-P0
+  gem.version       = '0.0.3'
 
   gem.required_ruby_version = '>=1.9.2'
 

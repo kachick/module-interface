@@ -1,7 +1,5 @@
 # Copyright (c) 2012 Kenichi Kamiya
 
-require_relative 'interface/version'
-
 class Module
   
   module Interface
