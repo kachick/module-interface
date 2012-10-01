@@ -19,6 +19,7 @@ klass = Class.new
 The klass.dup do |kls|
   CATCH NotImplementedError do
     kls.module_eval do
+      include base_mod
       interface base_mod do
         def run
         end
@@ -33,8 +34,8 @@ The klass.dup do |kls|
   end
   
   kls.module_eval do 
-
-    interface base_mod, true do
+    include base_mod
+    interface base_mod do
       def walk
       end
 

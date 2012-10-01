@@ -6,8 +6,7 @@ class Module
   
   module Interface
 
-    # @param [Module] base_mod
-    # @param [Boolean] include_base_mod
+    # @param [Module] mod
     # @return [self]
     # @example
     #   module Runnable
@@ -16,23 +15,22 @@ class Module
     #   end
     #   
     #   class Person
-    #
+    #     include Runnable
     #     interface Runnable do
     #       def run; end
-    #     end #=> NotImplementedError "must add methods [walk]"
-    #
+    #     end #=> NotImplementedError "shortage methods: [:walk]"
     #   end
-    def interface(base_mod, include_base_mod=true)
-      module_eval do
-        include base_mod if include_base_mod
+    def interface(mod)
+      yield
+      
+      shortages = (mod.instance_methods(false) | mod.private_instance_methods(false)) - \
+                  (instance_methods(false) | private_instance_methods(false))
         
-        yield
-        
-        shortage = base_mod.instance_methods(false) - instance_methods(false)
-        unless shortage.empty?
-          raise NotImplementedError, "must add methods [#{shortage.join ', '}]"
-        end
+      unless shortages.empty?
+        raise NotImplementedError, "shortage methods: #{shortages.inspect}"
       end
+      
+      self
     end
 
   end
