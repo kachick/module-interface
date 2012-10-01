@@ -7,7 +7,8 @@ class Module
     private
     
     # @param [Module] mod
-    # @return [self]
+    # @yieldreturn [self]
+    # @return [void]
     # @example
     #   module Runnable
     #     def walk; end

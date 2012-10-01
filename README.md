@@ -4,7 +4,7 @@ module-interface
 Description
 -----------
 
-BlockScope for to force define methods in module/class.
+Provide BlockScope for to force define methods in module/class.
 
 Usage
 -----
@@ -20,12 +20,18 @@ module Runnable
 end
 
 class Person
-
+  include Runnable
+  extend Module::Interface
   interface Runnable do
     def run; end
-  end #=> NotDefinedError "must add methods [walk]"
-
+  end #=> NotImplementedError "shortage methods: [:walk]"
 end
+```
+
+### Anywhere
+
+```ruby
+require 'module/interface/core_ext'
 ```
 
 Requirements
