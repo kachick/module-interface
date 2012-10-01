@@ -8,9 +8,9 @@ module Runnable
 end
 
 class Person
-
+  include Runnable
+  extend Module::Interface
   interface Runnable do
     def run; end
-  end #=> NotDefinedError "must add methods [walk]"
-
+  end #=> NotImplementedError "shortage methods: [:walk]"
 end

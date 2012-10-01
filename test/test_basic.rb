@@ -1,8 +1,4 @@
-$VERBOSE = true
-
-require 'test/declare'
-require_relative '../lib/module/interface'
-
+require_relative 'helper'
 
 base_mod = Module.new do
 
@@ -20,6 +16,7 @@ The klass.dup do |kls|
   CATCH NotImplementedError do
     kls.module_eval do
       include base_mod
+      extend Module::Interface
       interface base_mod do
         def run
         end
@@ -35,6 +32,7 @@ The klass.dup do |kls|
   
   kls.module_eval do 
     include base_mod
+    extend Module::Interface
     interface base_mod do
       def walk
       end

@@ -3,7 +3,9 @@
 class Module
   
   module Interface
-
+    
+    private
+    
     # @param [Module] mod
     # @return [self]
     # @example
@@ -14,6 +16,7 @@ class Module
     #   
     #   class Person
     #     include Runnable
+    #     extend Module::Interface
     #     interface Runnable do
     #       def run; end
     #     end #=> NotImplementedError "shortage methods: [:walk]"
@@ -34,5 +37,3 @@ class Module
   end
   
 end
-
-require_relative 'interface/core_ext'
