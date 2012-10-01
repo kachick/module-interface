@@ -17,7 +17,7 @@ end
 klass = Class.new
 
 The klass.dup do |kls|
-  CATCH Module::Interface::NotDefinedError do
+  CATCH NotImplementedError do
     kls.module_eval do
       interface base_mod do
         def run

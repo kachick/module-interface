@@ -5,8 +5,6 @@ require_relative 'interface/version'
 class Module
   
   module Interface
-  
-    class NotDefinedError < NoMethodError; end
 
     # @param [Module] base_mod
     # @param [Boolean] include_base_mod
@@ -21,7 +19,7 @@ class Module
     #
     #     interface Runnable do
     #       def run; end
-    #     end #=> Interface::NotDefinedError "must add methods [walk]"
+    #     end #=> NotImplementedError "must add methods [walk]"
     #
     #   end
     def interface(base_mod, include_base_mod=true)
@@ -32,7 +30,7 @@ class Module
         
         shortage = base_mod.instance_methods(false) - instance_methods(false)
         unless shortage.empty?
-          raise  Interface::NotDefinedError, "must add methods [#{shortage.join ', '}]"
+          raise NotImplementedError, "must add methods [#{shortage.join ', '}]"
         end
       end
     end
