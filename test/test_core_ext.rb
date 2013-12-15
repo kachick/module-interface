@@ -1,3 +1,5 @@
+# coding: us-ascii
+
 require_relative 'helper'
 require_relative '../lib/module/interface/core_ext'
 

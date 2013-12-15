@@ -1,3 +1,5 @@
+# coding: us-ascii
+
 require_relative 'helper'
 
 base_mod = Module.new do
