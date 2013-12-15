@@ -24,10 +24,12 @@ class Module
     #     end #=> NotImplementedError "shortage methods: [:walk]"
     #   end
     def interface(mod)
+      wants = mod.instance_methods(false) | mod.private_instance_methods(false)
+
       yield
-      
-      shortages = (mod.instance_methods(false) | mod.private_instance_methods(false)) - \
-                  (instance_methods(false) | private_instance_methods(false))
+
+      havings = instance_methods(false) | private_instance_methods(false)
+      shortages = wants - havings
         
       unless shortages.empty?
         raise NotImplementedError, "shortage methods: #{shortages.inspect}"
