@@ -7,7 +7,7 @@ Gem::Specification.new do |gem|
   gem.description   = %q{Force to define methods in module/class}
   gem.summary       = gem.description.dup
   gem.license       = 'MIT'
-  gem.version       = '0.0.4'
+  gem.version       = '0.1.0'
 
   gem.add_development_dependency 'test-declare', '~> 0.0.3'
   gem.add_development_dependency 'yard', '>= 0.9.20', '< 2'
