@@ -1,8 +1,9 @@
 module-interface
 =================
 
-[![Build Status](https://secure.travis-ci.org/kachick/module-interface.png)](http://travis-ci.org/kachick/module-interface)
-[![Gem Version](https://badge.fury.io/rb/module-interface.png)](http://badge.fury.io/rb/module-interface)
+* ***This repository is archived***
+* ***No longer maintained***
+* ***All versions have been yanked from https://rubygems.org/ for releasing valuable namespace for others***
 
 Force to define methods in module/class
 
@@ -37,24 +38,7 @@ require 'module/interface/core_ext'
 Requirements
 ------------
 
-* [Ruby 2.5 or later](http://travis-ci.org/#!/kachick/module-interface)
-
-Install
--------
-
-```bash
-$ gem install module-interface
-```
-
-Link
-----
-
-* [Home](http://kachick.github.com/module-interface)
-* [code](https://github.com/kachick/module-interface)
-* [API](http://kachick.github.com/module-interface/yard/frames.html)
-* [issues](https://github.com/kachick/module-interface/issues)
-* [CI](http://travis-ci.org/#!/kachick/module-interface)
-* [gem](https://rubygems.org/gems/module-interface)
+* Ruby 2.5 or later
 
 License
 -------

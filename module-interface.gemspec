@@ -21,7 +21,6 @@ Gem::Specification.new do |gem|
 
   # common
 
-  gem.homepage      = "http://kachick.github.com/#{gem.name}"
   gem.authors       = ['Kenichi Kamiya']
   gem.email         = ['kachick1+ruby@gmail.com']
   gem.files         = `git ls-files`.split($\)
